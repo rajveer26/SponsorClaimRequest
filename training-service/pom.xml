@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+  	http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hims.common</groupId>
+	<artifactId>training-service</artifactId>
+	<packaging>jar</packaging>
+	<name>training-service</name>
+	<description>
+		his Service related files for Application
+	</description>
+	<version>${revision}</version>
+	
+	<dependencies>
+
+		<dependency>
+			<groupId>com.hims.common</groupId>
+			<artifactId>common-all</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hims.common</groupId>
+			<artifactId>his-dao</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.hims.common</groupId>
+			<artifactId>his-domain</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.hims.common</groupId>
+			<artifactId>his-service</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.hims.common</groupId>
+			<artifactId>training-domain</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.5</version>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>  
+				  <groupId>commons-codec</groupId>
+				  <artifactId>commons-codec</artifactId>
+				</exclusion>
+			</exclusions> 
+		</dependency>
+		<!-- / Drug database Integration -->
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>JBoss Repository</id>
+			<url>http://repository.jboss.com/maven2</url>
+		</repository>
+
+
+				<repository>
+			<id>ibiblio</id>
+			<name>ibiblio</name>
+			<url>http://www.ibiblio.org/maven2</url>
+		</repository>
+
+		<!-- repository>
+			<id>ibiblio-mirror</id>
+			<name>ibiblio-mirror</name>
+			<url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+		</repository>
+
+
+		<repository>
+			<id>Apache snapshot repository</id>
+			<name>apache</name>
+			<url>
+				http://people.apache.org/repo/m2-snapshot-repository
+			</url>
+		</repository>
+		<repository>
+			<id>Apache Repository</id>
+			<url>
+				http://people.apache.org/repo/m2-incubating-repository
+			</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository-->
+
+	</repositories>
+	<pluginRepositories>
+
+		<pluginRepository>
+			<id>Ibiblio Respository</id>
+			<url>http://repo1.maven.org/maven2/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+		<pluginRepository>
+			<id>Codehaus Repository</id>
+			<url>http://repository.codehaus.org/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+		<pluginRepository>
+			<id>Codehaus Snapshot Repository</id>
+			<url>http://snapshots.repository.codehaus.org/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<!-- manifest>
+						<addClasspath>true</addClasspath>
+						<classpathPrefix>lib</classpathPrefix>
+					</manifest-->
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>.</targetPath>
+			</resource>
+		</resources>
+	</build>
+
+</project>

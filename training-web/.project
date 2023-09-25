@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+  <name>training-web</name>
+  <comment>module backing bean related files for Application. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>common-all</project>
+    <project>his-web</project>
+    <project>his-domain</project>
+    <project>adt-domain</project>
+    <project>his-service</project>
+    <project>his-dao</project>
+    <project>audit-service</project>
+    <project>training-domain</project>
+    <project>training-service</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>
